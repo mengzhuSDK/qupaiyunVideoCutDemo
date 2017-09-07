@@ -1,0 +1,27 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    package="com.aliyun.demo.crop">
+
+    <application>
+        <activity android:name="com.aliyun.demo.crop.CropSettingTest"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="com.duanqu.qupai.action.crop.setting"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.aliyun.demo.crop.MediaActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.duanqu.qupai.action.crop"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.aliyun.demo.crop.CropDemo"
+            android:screenOrientation="portrait">
+
+        </activity>
+    </application>
+
+</manifest>

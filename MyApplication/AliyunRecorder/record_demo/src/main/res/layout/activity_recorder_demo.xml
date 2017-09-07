@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/reocrd_bg"
+    android:orientation="vertical">
+
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tools_bar"
+        android:layout_gravity="center" />
+    <TextView
+        android:id="@+id/record_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/record_timeline"
+        android:gravity="center"/>
+
+    <com.aliyun.quview.RecordTimelineView
+        android:id="@+id/record_timeline"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:visibility="gone"
+        android:layout_below="@id/preview"/>
+
+    <FrameLayout
+        android:id="@+id/tools_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/icon_back" />
+
+        <ImageView
+            android:id="@+id/switch_light"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="115dp"
+            android:src="@drawable/switch_light_selector" />
+
+        <ImageView
+            android:id="@+id/switch_camera"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="65dp"
+            android:src="@drawable/switch_alter" />
+
+        <ImageView
+            android:id="@+id/switch_beauty"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="115dp"
+            android:src="@drawable/switch_beauty_selected" />
+
+        <ImageView
+            android:id="@+id/switch_ratio"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="165dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/switch_ratio" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/record_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/record_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/record_state_selector"/>
+        <ImageView
+            android:id="@+id/delete_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_gravity="center_vertical|left"
+            android:src="@drawable/icon_delete"
+            android:visibility="gone"
+            />
+        <ImageView
+            android:id="@+id/complete_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="60dp"
+            android:layout_gravity="center_vertical|right"
+            android:src="@drawable/icon_complete"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/icon_default"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="60dp"
+            android:layout_gravity="center_vertical|right"
+            android:src="@mipmap/icon_default"/>
+    </FrameLayout>
+    <TextView
+        android:id="@+id/filter_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:shadowColor="#40000000"
+        android:shadowDx="0"
+        android:shadowDy="8"
+        android:shadowRadius="1"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+    <FrameLayout
+        android:id="@+id/copy_res_tip"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/res_copy" />
+
+        <ProgressBar
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+</RelativeLayout>
